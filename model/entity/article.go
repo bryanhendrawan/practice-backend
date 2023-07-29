@@ -9,3 +9,8 @@ type Article struct {
 	Body    string    `json:"body"`
 	Created time.Time `json:"created"`
 }
+
+type ArticleQueryParser struct {
+	Query  string `query:"query"`
+	Author string `query:"author"`
+}

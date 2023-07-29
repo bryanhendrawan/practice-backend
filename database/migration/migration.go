@@ -14,5 +14,5 @@ func RunMigration() {
 		log.Println(err)
 	}
 
-	fmt.Println("Database migration success")
+	fmt.Println("Migrate Table articles success")
 }
