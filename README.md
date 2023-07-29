@@ -23,7 +23,9 @@ Table articles
 
 ## API Contract:
 1. Create Article
-   ```POST http://localhost:3000/article```
+   ```
+   POST http://localhost:3000/article
+   ```
    ```
    Request Body
    {
@@ -32,8 +34,10 @@ Table articles
     "body": "lorem ipsum"
    }
    ```
-2. Get Articles
-   ```GET http://localhost:3000/articles```
+3. Get Articles
+   ```
+   GET http://localhost:3000/articles
+   ```
    ```
    Query Param
    - query="best song" // filter from title or body
@@ -42,8 +46,10 @@ Table articles
 
 ## Flow
 1. Create Article
-   ```receive request -> parsing -> validate -> save into database -> store into redis -> return response```
-2. Get Articles
+   ```
+   receive request -> parsing -> validate -> save into database -> store into redis -> return response
+   ```
+3. Get Articles
    ```
    receive request -> parsing -> get article from redis
      -> if article found -> return response
