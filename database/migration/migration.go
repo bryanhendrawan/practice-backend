@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"practice-backend/database"
-	"practice-backend/model/entity"
+	"practice-backend/entity"
 )
 
 func RunMigration() {

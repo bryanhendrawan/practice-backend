@@ -2,7 +2,7 @@ package model
 
 import (
 	"practice-backend/database"
-	"practice-backend/model/entity"
+	"practice-backend/entity"
 )
 
 func GetArticles(query entity.ArticleQueryParser) ([]entity.Article, error) {

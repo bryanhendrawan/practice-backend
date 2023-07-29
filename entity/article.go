@@ -2,6 +2,11 @@ package entity
 
 import "time"
 
+var (
+	KeyArticleByID   = "article:id:%d"
+	KeyArticleByHash = "article:hash:%s"
+)
+
 type Article struct {
 	ID      int       `json:"id" gorm:"primaryKey"`
 	Author  string    `json:"author"`
