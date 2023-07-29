@@ -5,7 +5,7 @@ import (
 	"practice-backend/model/entity"
 )
 
-func GetArticleData(query entity.ArticleQueryParser) ([]entity.Article, error) {
+func GetArticles(query entity.ArticleQueryParser) ([]entity.Article, error) {
 	var articles []entity.Article
 	queryDB := database.DB
 
@@ -20,4 +20,14 @@ func GetArticleData(query entity.ArticleQueryParser) ([]entity.Article, error) {
 	result := queryDB.Order("created desc").Find(&articles)
 
 	return articles, result.Error
+}
+
+func CreateArticle(article entity.Article) (entity.Article, error) {
+	result := database.DB.Create(&article)
+
+	if result.Error != nil {
+		return article, result.Error
+	}
+
+	return article, nil
 }

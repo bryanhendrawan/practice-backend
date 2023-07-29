@@ -14,3 +14,9 @@ type ArticleQueryParser struct {
 	Query  string `query:"query"`
 	Author string `query:"author"`
 }
+
+type CreateArticle struct {
+	Author string `json:"author" validate:"required"`
+	Title  string `json:"title" validate:"required"`
+	Body   string `json:"body" validate:"required"`
+}

@@ -7,6 +7,6 @@ import (
 )
 
 func RouteInit(r *fiber.App) {
-	r.Get("/articles", handler.GetArticle)
-	r.Post("/articles", handler.CreateArticle)
+	r.Get("/articles", handler.GetArticles)
+	r.Post("/article", handler.CreateArticle)
 }
